@@ -1,76 +1,73 @@
-TASK 2 — Unemployment Analysis with Python (CodeAlpha Data Science Internship)  
+TASK 2 — Unemployment Analysis with Python (CodeAlpha Data Science Internship)
+
 Objective  
-To analyze and visualize unemployment trends across India before, during, and after the COVID-19 pandemic using Python.  
-The goal is to identify key regional variations, pandemic impacts, and labor participation insights through data visualization and analysis.
+The project aimed to analyze unemployment trends across Indian regions, highlight disparities, and study the employment impact of the COVID-19 pandemic using Python. The goal was to visualize patterns in unemployment rates and generate socio-economic insights for policy analysis.
 
 Dataset Information  
-Source: Unemployment in India (Kaggle)  
+Source: Unemployment in India – Kaggle Dataset  
 Records: 740 rows  
 Features:  
-Column/Description  
-Region — Indian state or region  
-Date — Data recording date  
-Frequency — Reporting frequency (Monthly)  
-Estimated Unemployment Rate (%) — % of unemployed individuals  
-Estimated Employed — Number of employed individuals  
-Estimated Labour Participation Rate (%) — % of people participating in the labor market  
-Area — Classification as Rural or Urban
+-  Region: Indian state/region  
+-  Date: Record date (2019–2020)  
+-  Frequency: Monthly  
+-  Estimated Unemployment Rate (%): Percentage of unemployed individuals  
+-  Estimated Employed: Number of employed individuals  
+-  Estimated Labour Participation Rate (%): Labor market participation  
+-  Area: Rural or Urban classification
 
 Workflow  
-Data Loading and Cleaning  
--  Loaded CSV file using Pandas.  
--  Removed missing values and cleaned column names.  
--  Converted the Date column to datetime format for time-based plotting.  
+Data Loading & Cleaning  
+-  Imported CSV and standardized column names  
+-  Converted Date to datetime format (dayfirst=True)  
+-  Removed null values and checked data consistency
+
 Exploratory Data Analysis (EDA)  
--  Used Seaborn and Matplotlib for multiple visualizations.  
--  Added monthly grouping and region-wise aggregation.  
-Feature Engineering  
--  Extracted month from date for time series analysis.  
--  Grouped data to compute monthly and regional averages.  
-Data Visualization  
--  Created six high-quality plots for regional and temporal trends.
+-  Produced summary statistics and descriptive metrics  
+-  Used Seaborn and Matplotlib to plot unemployment trends and regional differences  
+-  Created boxplots, heatmaps, and region-wise bar charts
+
+Feature Analysis  
+-  Aggregated monthly data to highlight temporal trends  
+-  Compared unemployment rates between rural and urban areas
+
+Statistical Summary  
+-  Total Records: 740  
+-  Time Period: May 2019 – June 2020  
+-  Mean Unemployment Rate: 11.78%  
+-  Minimum: 0.00%, Maximum: 76.74%  
+-  Average Labour Participation: 42.63%  
+-  Average Employment: ~7.2 million
+
+Regional Insights  
+Rank | Region            | Avg. Unemployment Rate (%)  
+---- |-------------------|---------------------------  
+1    | Tripura           | 28.35  
+2    | Haryana           | 26.28  
+3    | Jharkhand         | 20.58  
+4    | Bihar             | 18.92  
+5    | Himachal Pradesh  | 18.54  
+Lowest | Meghalaya      | 4.79  
+
+Key Observations  
+-  Tripura and Haryana had the highest unemployment rates  
+-  Gujarat, Karnataka, and Meghalaya had the lowest  
+-  Rural areas showed more stability, urban areas were more volatile
 
 Visualizations and Insights  
-1. Unemployment Rate Over Time  
--  Line Chart  
--  Sharp spike in unemployment between March–June 2020 aligns with COVID-19 lockdown.  
--  Gradual recovery observed post-2021.
-
-2. Regional Variation (Boxplot)  
--  Box Plot grouped by Region  
--  Northern and Eastern states show higher fluctuations in unemployment.  
--  Tripura and Jharkhand have the highest rates.
-
-3. Correlation Heatmap  
--  Seaborn Heatmap  
--  Unemployment Rate shows negative correlation with Employment and Labour Participation Rate.  
--  As employment increases, unemployment naturally decreases.
-
-4. Monthly Average Trend  
--  Line Plot (aggregated monthly)  
--  April 2020 saw the highest average unemployment, reflecting the pandemic’s economic impact.
-
-5. Region-wise Average Unemployment Rate  
--  Horizontal Bar Chart  
--  Highest: Tripura, Jharkhand, Delhi  
--  Lowest: Gujarat, Tamil Nadu, Karnataka  
--  Indicates industrial and economic resilience differences.
-
-6. Area-wise Comparison (Rural vs Urban)  
--  Box Plot  
--  Urban areas display slightly higher unemployment variability than rural areas, reflecting more volatile job markets.
+1. Unemployment Rate Over Time: Spike during March–June 2020 (COVID-19 lockdown)  
+2. Regional Variation: High variability, especially in northern and eastern states  
+3. Correlation Heatmap: Unemployment Rate negatively correlated with Employment and Labour Participation  
+4. Monthly Trend: Peak in unemployment in April–May 2020  
+5. Rural vs Urban: Urban unemployment slightly higher and more volatile
 
 Results Summary  
-Aspect/Observation  
-Dataset Size: 740 entries  
-Time Period: May 2019 – June 2021  
-Peak Unemployment: April–May 2020 (Pandemic lockdown)  
-Most Affected Regions: Tripura, Jharkhand, Delhi  
-Least Affected Regions: Gujarat, Tamil Nadu, Karnataka  
-Area Comparison: Urban > Rural (in variation)  
-Correlation: Employment and Unemployment are negatively correlated.
+-  Period: May 2019 – June 2020  
+-  Highest Unemployment: Tripura (28.35%)  
+-  Lowest Unemployment: Meghalaya (4.79%)  
+-  COVID-19 Impact: Sharp spike April–May 2020  
+-  Labour Participation: Avg. 42.63%  
+-  Urban vs Rural: Urban shows higher variance  
+-  Employment and Unemployment are negatively correlated
 
 Conclusion  
-The unemployment rate in India dramatically spiked during the COVID-19 lockdown but gradually stabilized after 2021.  
-Regions with stronger industrial economies (Gujarat, Tamil Nadu) recovered more quickly, while others remained affected longer.  
-This project demonstrates the use of Python, Pandas, and Seaborn to understand real-world economic data and extract insights that are relevant to policy-making.
+Unemployment in India sharply escalated during the COVID-19 lockdown, peaking in several states. Industrialized regions like Gujarat and Karnataka showed quicker recovery, while states such as Tripura and Jharkhand continued to struggle. This analysis demonstrated the value of Python-based EDA and visualization tools (Pandas, Seaborn, Matplotlib) in drawing actionable economic and policy insights.
