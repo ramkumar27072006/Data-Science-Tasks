@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Dashboard</title>
+</head>
+<body class="bg-slate-950 text-slate-200">
+    <div class="flex">
+        <aside class="w-64 min-h-screen bg-slate-900 p-6">
+            <h2 class="text-xl font-bold mb-6">📊 Tracker</h2>
+            <a href="/" class="block mb-3">Dashboard</a>
+            <a href="/add_student" class="block mb-3">Add Student</a>
+            <a href="/add_grades" class="block">Add Grades</a>
+        </aside>
+
+        <main class="flex-1 p-10">
+            <h1 class="text-3xl font-bold mb-8">Dashboard</h1>
+
+            <div class="grid grid-cols-3 gap-6 mb-10">
+                <div class="bg-slate-800 p-6 rounded-xl">
+                    <p class="text-sm">Total Students</p>
+                    <p class="text-4xl font-bold">{{ total }}</p>
+                </div>
+                <div class="bg-slate-800 p-6 rounded-xl">
+                    <p class="text-sm">Database</p>
+                    <p class="text-xl font-bold">SQLite</p>
+                </div>
+                <div class="bg-slate-800 p-6 rounded-xl">
+                    <p class="text-sm">Status</p>
+                    <p class="text-xl font-bold text-green-400">Active</p>
+                </div>
+            </div>
+
+            <div class="bg-slate-900 rounded-xl overflow-hidden">
+                <table class="w-full">
+                    <tr class="bg-slate-800 text-left">
+                        <th class="p-4">Roll</th>
+                        <th class="p-4">Name</th>
+                        <th class="p-4">Action</th>
+                    </tr>
+                    {% for s in students %}
+                    <tr class="border-b border-slate-800">
+                        <td class="p-4">{{ s[0] }}</td>
+                        <td class="p-4">{{ s[1] }}</td>
+                        <td class="p-4">
+                            <a class="text-blue-400" href="/student/{{ s[0] }}">View</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

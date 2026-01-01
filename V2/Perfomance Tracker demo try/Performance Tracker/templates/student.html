@@ -1,0 +1,12 @@
+
+<script src="https://cdn.tailwindcss.com"></script>
+<div class="min-h-screen bg-slate-950 text-white p-10">
+    <h1 class="text-3xl mb-6">{{ name }}</h1>
+    <div class="bg-slate-900 rounded-xl p-6 w-1/2">
+        {% for g in grades %}
+            <p>{{ g[0] }} : {{ g[1] }}</p>
+        {% endfor %}
+        <p class="mt-4 text-xl">Average: {{ avg }}</p>
+    </div>
+    <a href="/" class="text-blue-400 block mt-6">← Back</a>
+</div>
